@@ -152,7 +152,7 @@ class Curl
      */
     public function getJson($url,$params = array(), $debug = false)
     {
-        return json_decode( $this->get($url, $params, $debug),ture );
+        return json_decode( $this->get($url, $params, $debug),true );
     }
 
     public function postJson($url, $data, $params = array(), $debug = false)
