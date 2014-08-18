@@ -148,6 +148,19 @@ class Curl
     }
 
     /*
+     * get/post json 数据为 array
+     */
+    public function getJson($url,$params = array(), $debug = false)
+    {
+        return json_decode( $this->get($url, $params, $debug),ture );
+    }
+
+    public function postJson($url, $data, $params = array(), $debug = false)
+    {
+        return json_decode( $this->get($url,$data,$params,$debug),true );
+    }
+
+    /*
      * 上传文件
      */
     public function put($url, $data = null, $params = array(), $debug = false)
